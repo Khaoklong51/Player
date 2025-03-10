@@ -49,6 +49,22 @@
     <PreferenceCategory app:title="@string/pref_subtitle_header">
 
         <SwitchPreferenceCompat
+            app:key="libass_android"
+            app:defaultValue="false"
+            android:summaryOn="@string/pref_libass_android_on"
+            android:summaryOff="@string/pref_libass_android_off"
+            app:title="@string/pref_libass_android" />
+
+        <ListPreference
+            app:defaultValue="CANVAS"
+            app:entries="@array/libass_android_subtitle_entries"
+            app:entryValues="@array/libass_android_subtitle_values"
+            app:dialogTitle="@string/pref_libass_android_mode_dialogue"
+            app:key="libass_android_mode"
+            app:title="@string/pref_libass_android_mode"
+            app:useSimpleSummaryProvider="true" />
+
+        <SwitchPreferenceCompat
             app:key="subtitleStyleEmbedded"
             app:defaultValue="true"
             android:summaryOn="@string/pref_subtitle_style_embedded_on"

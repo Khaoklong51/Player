@@ -23,6 +23,11 @@ android {
             }
         }
     }
+    packagingOptions {
+        jniLibs {
+            pickFirsts += ['lib/arm64-v8a/libc++_shared.so', 'lib/x86_64/libc++_shared.so', 'lib/x86/libc++_shared.so', 'lib/armeabi-v7a/libc++_shared.so']
+        }
+    }
     buildTypes {
         release {
             minifyEnabled false
@@ -114,4 +119,9 @@ dependencies {
     implementation project(path: ':doubletapplayerview')
     implementation project(path: ':android-file-chooser')
     implementation fileTree(dir: "libs", include: ["lib-*.aar"])
+    implementation ('io.github.peerless2012:ass-media:0.1.1') {
+        exclude group: "androidx.media3", module: "media3-ui"
+        exclude group: "androidx.media3", module: "media3-extractor"
+        exclude group: "androidx.media3", module: "media3-exoplayer"
+    }
 }

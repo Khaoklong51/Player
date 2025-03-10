@@ -48,6 +48,10 @@ class Prefs {
     private static final String PREF_KEY_SUBTITLE_STYLE_EMBEDDED = "subtitleStyleEmbedded";
     private static final String PREF_KEY_SUBTITLE_STYLE_BOLD = "subtitleStyleBold";
 
+    private static final String PREF_KEY_SUBTITLE_LIBASS_ANDROID = "libass_android";
+
+    private static final String PREF_KEY_SUBTITLE_LIBASS_ANDROID_MODE = "libass_android_mode";
+
     public static final String TRACK_DEFAULT = "default";
     public static final String TRACK_DEVICE = "device";
 
@@ -81,6 +85,10 @@ class Prefs {
     public String languageAudio = TRACK_DEVICE;
     public boolean subtitleStyleEmbedded = true;
     public boolean subtitleStyleBold = false;
+
+    public boolean subtitleLibassAndroid = false;
+
+    public String subtitleLibassAndroidMode = "CANVAS";
 
     private LinkedHashMap positions;
 
@@ -130,6 +138,8 @@ class Prefs {
         languageAudio = mSharedPreferences.getString(PREF_KEY_LANGUAGE_AUDIO, languageAudio);
         subtitleStyleEmbedded = mSharedPreferences.getBoolean(PREF_KEY_SUBTITLE_STYLE_EMBEDDED, subtitleStyleEmbedded);
         subtitleStyleBold = mSharedPreferences.getBoolean(PREF_KEY_SUBTITLE_STYLE_BOLD, subtitleStyleBold);
+        subtitleLibassAndroid = mSharedPreferences.getBoolean(PREF_KEY_SUBTITLE_LIBASS_ANDROID, subtitleLibassAndroid);
+        subtitleLibassAndroidMode = mSharedPreferences.getString(PREF_KEY_SUBTITLE_LIBASS_ANDROID_MODE, subtitleLibassAndroidMode);
     }
 
     public void updateMedia(final Context context, final Uri uri, final String type) {

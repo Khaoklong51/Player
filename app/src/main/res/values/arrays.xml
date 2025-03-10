@@ -14,6 +14,18 @@
     <item>legacy</item>
   </string-array>
 
+  <string-array name="libass_android_subtitle_entries">
+    <item>Opengl</item>
+    <item>Canvas</item>
+    <item>Legacy</item>
+  </string-array>
+
+  <string-array name="libass_android_subtitle_values">
+    <item>OPEN_GL</item>
+    <item>CANVAS</item>
+    <item>LEGACY</item>
+  </string-array>
+
   <string-array name="decoder_priority_entries">
     <item>@string/pref_decoder_priority_prefer_device</item>
     <item>@string/pref_decoder_priority_prefer_app</item>
