@@ -56,7 +56,7 @@
             app:title="@string/pref_libass_android" />
 
         <ListPreference
-            app:defaultValue="CANVAS"
+            app:defaultValue="OPEN_GL"
             app:entries="@array/libass_android_subtitle_entries"
             app:entryValues="@array/libass_android_subtitle_values"
             app:dialogTitle="@string/pref_libass_android_mode_dialogue"
